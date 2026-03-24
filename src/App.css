@@ -1,0 +1,9 @@
+/* NexusCI — wipe all Vite scaffold defaults */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; overflow: hidden; }
+body { background: #0d0f12; color: #e2e4e9; font-size: 13px; font-family: 'Inter', sans-serif; }
+
+/* Kill every Vite default class so they can't bleed in */
+.counter, .hero, .hero .base, .hero .framework, .hero .vite,
+.ticks, #center, #next-steps, #docs, #spacer, #next-steps ul,
+#next-steps ul a, #next-steps ul li { all: unset; display: none !important; }
