@@ -247,7 +247,7 @@ function NavItem({item,active,collapsed,onClick}){
 
 function LeftNav({active,onNav,collapsed}){
   return <nav style={{width:collapsed?48:200,background:G.bgPanel,borderRight:`1px solid ${G.border}`,
-    display:"flex",flexDirection:"column",position:"fixed",top:42,left:0,height:"calc(100vh - 42px)",
+    display:"flex",flexDirection:"column",position:"relative",top:0,left:0,height:"100%",
     zIndex:90,transition:"width .2s"}}>
     <div style={{padding:"10px 0 6px",borderBottom:`1px solid ${G.border}`,marginBottom:6}}>
       {!collapsed&&<div style={{padding:"4px 14px 8px",fontSize:9,fontWeight:700,letterSpacing:".1em",textTransform:"uppercase",color:G.textMut}}>Monitoring</div>}
@@ -1251,7 +1251,7 @@ export default function App(){
 
       {/* Main scrollable content */}
       <main style={{
-        marginLeft:navW,flex:1,overflowY:"auto",overflowX:"hidden",
+        flex:1,overflowY:"auto",overflowX:"hidden",
         transition:"margin-left .2s",minWidth:0,height:"100%"
       }}>
         {renderPage()}
